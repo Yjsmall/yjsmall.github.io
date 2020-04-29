@@ -152,6 +152,106 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-插入类排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/30/%E6%8F%92%E5%85%A5%E7%B1%BB%E6%8E%92%E5%BA%8F/">插入类排序</a>
+    </h1>
+  
+
+        
+        <a href="/2020/04/30/%E6%8F%92%E5%85%A5%E7%B1%BB%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2020-04-29T16:48:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><ul>
+<li>直接插入排序</li>
+<li>折半插入排序</li>
+<li>希尔插入排序</li>
+</ul>
+<hr>
+<h1 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h1><ol>
+<li>带哨兵的</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">withSentrySort</span><span class="params">(<span class="keyword">int</span> r[],<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">2</span>;i &lt; n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        r[<span class="number">0</span>] = r[i];</span><br><span class="line">        <span class="keyword">for</span>(j = i<span class="number">-1</span>;r[i] &lt; r[j];j--) </span><br><span class="line">        &#123;</span><br><span class="line">            r[j+<span class="number">1</span>] = r[j]; <span class="comment">//j所指向的元素向后移</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        r[j+<span class="number">1</span>] = r[<span class="number">0</span>]; <span class="comment">//把待排序元素插入,j最后永远指向空位前.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="折半插入排序"><a href="#折半插入排序" class="headerlink" title="折半插入排序"></a>折半插入排序</h1><ol>
+<li>带哨兵</li>
+</ol>
+<pre><code class="C"><span class="function"><span class="keyword">void</span> <span class="title">binaryInsertSort</span><span class="params">(<span class="keyword">int</span> r[],<span class="keyword">int</span> n)</span></span>
+<span class="function"></span>{
+    <span class="keyword">int</span> i,j;
+    <span class="keyword">int</span> low,mid,high;
+    <span class="keyword">for</span>(i = <span class="number">2</span>;i &lt; n;i++)
+    {
+        low = <span class="number">1</span>;    <span class="comment">//进去for循环就要进行初始化</span>
+        high = i<span class="number">-1</span>;
+        r[<span class="number">0</span>] = r[i];
+        <span class="keyword">while</span>(low &lt;= high)
+        {
+            mid = (low + high)/<span class="number">2</span>; <span class="comment">//每次都要重新让mid指向不同</span>
+            <span class="keyword">if</span>(r[<span class="number">0</span>] &lt; r[mid])
+                high = mid <span class="number">-1</span>;
+            <span class="keyword">else</span>
+                low = mid +<span class="number">1</span>; <span class="comment">//缩进易读</span>
+        }
+        <span class="keyword">for</span>(j = i<span class="number">-1</span>;j &gt;= high+<span class="number">1</span>;j--) <span class="comment">//high最后是指向r[0]所要插入的位置</span>
+        {
+            r[j+<span class="number">1</span>] = r[j];
+        }
+        r[high+<span class="number">1</span>] = r[<span class="number">0</span>];
+    }
+}</code></pre>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/04/30/%E6%8F%92%E5%85%A5%E7%B1%BB%E6%8E%92%E5%BA%8F/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-提示文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
