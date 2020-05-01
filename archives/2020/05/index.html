@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Hexo</title>
+  <title>Archives: 2020/5 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/archives/2020/05/index.html">
 <meta property="og:site_name" content="Hexo">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
@@ -152,335 +152,47 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-Java-Thread" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/01/Java-Thread/">Java_Thread</a>
-    </h1>
-  
-
-        
-        <a href="/2020/05/01/Java-Thread/" class="archive-article-date">
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/05/01/Java-Thread/" class="archive-article-date">
   	<time datetime="2020-05-01T09:01:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-01</time>
 </a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>大纲</p>
-<ul>
-<li>程序(进程)的引入</li>
-<li>线程<ul>
-<li>线程的介绍</li>
-<li>两种创建线程的方式</li>
-<li>常见线程方法(函数)的介绍</li>
-<li>线程的控制</li>
-</ul>
-</li>
-<li>线程实例(买票)</li>
-</ul>
-<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><blockquote>
-<p>一个记事本程序可以打开三个记事本(进程)</p>
-<ul>
-<li>单道程序设计环境中<strong>程序</strong>特点<ul>
-<li>定义<br>除了操作系统,只有一个用户程序,用户独享程序整个计算机资源</li>
-<li>特点<ol>
-<li>资源多占</li>
-<li>执行的顺序性:每次只执行一个程序,做完一个,再做下一个</li>
-<li>结果再现性:执行环境和初始条件相同,重复执行的程序,结果还是一样的</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>多道程序设计环境中<strong>程序</strong>特点<ul>
-<li>定义<br>出来操作系统,存在多个用户程序 </li>
-<li>特点<ol>
-<li>间断性:由于资源共享和合作,并发程序间相互制约,造成合作执间断(比如我要存数据,内存不够,或者替代原有内存的内容)</li>
-<li>失去封闭性:程序执行受外界影响</li>
-<li>不可再现性:可能得到不同结果<br>进程切换需要时间,所以要线程</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><h3 id="线程的介绍"><a href="#线程的介绍" class="headerlink" title="线程的介绍"></a>线程的介绍</h3><ul>
-<li>线程<ul>
-<li>单线程:一条线走到底</li>
-<li>多线程:劈开一个分支,交替执行.(A执行一会,B执行一会)</li>
-</ul>
-</li>
-</ul>
-<h3 id="两种线程的方式"><a href="#两种线程的方式" class="headerlink" title="两种线程的方式"></a>两种线程的方式</h3><blockquote>
-<p>创建线程的第一种方式</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> <span class="keyword">extends</span> <span class="title">Thread</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;                      <span class="comment">//36~38就是A执行一会   </span></span><br><span class="line">            System.out.printfln(<span class="string">"AAA"</span>);       </span><br><span class="line">        &#125;                                   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestThread</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        A aa = <span class="keyword">new</span> A();</span><br><span class="line">        aa.start(); <span class="comment">//1.开始一个线程 2.执行run方法</span></span><br><span class="line">        <span class="comment">//aa.start();不可以调用两次</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;                       <span class="comment">//while循环就是B执行一会</span></span><br><span class="line">            System.out.println(<span class="string">"BBB"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong><em>注意问题</em></strong></p>
-<ol>
-<li>创建线程是使用star()方法,直接调用run()方法只会while(AAA)不会执行BBB</li>
-<li>执行一个线程实际就是执行该线程的<strong>run方法中的代码</strong></li>
-<li>cpu不一定立即执行aa对应的线程</li>
-<li>一个Thread对象只能代表一个线程,对象不能调用两次star();</li>
-</ol>
-<blockquote>
-<p>创建线程的第二种方式</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;                      </span><br><span class="line">            System.out.printfln(<span class="string">"AAA"</span>);       </span><br><span class="line">        &#125;                                   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span></span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestThread</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        A aa = <span class="keyword">new</span> A();</span><br><span class="line">        Thread t = <span class="keyword">new</span> Thread(aa); <span class="comment">//public Thread(Runnable r);人家的构造方法所要的参数</span></span><br><span class="line">        Thread t = <span class="keyword">new</span> Thread(<span class="keyword">new</span> A());</span><br><span class="line">        t.star();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//B bb = new B();</span></span><br><span class="line">        <span class="comment">//Thread t2 = new Thread(bb);传入参数不同</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;                       </span><br><span class="line">            System.out.println(<span class="string">"BBB"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="常见线程的方法-函数-介绍"><a href="#常见线程的方法-函数-介绍" class="headerlink" title="常见线程的方法(函数)介绍"></a>常见线程的方法(函数)介绍</h3><ul>
-<li><p>public final void setName(String name)</p>
-<ul>
-<li>这是当前线程的名字<ul>
-<li>final 修饰类(不可继承) 修饰属性(不可修改,且要赋初值) 修饰方法(不可重写) </li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>public static Thread currentThread()</p>
-<ul>
-<li>返回当前正在执行的线程对象的引用<br>因为是static,所以可以用类名来访问</li>
-</ul>
-</li>
-<li><p>public final String getName()</p>
-<ul>
-<li>返回当前线程的名字</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">"在运行!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestThread</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        A aa1 = <span class="keyword">new</span> A();</span><br><span class="line">        aa1.setName(<span class="string">"张三"</span>);</span><br><span class="line">        aa1.start();</span><br><span class="line">        </span><br><span class="line">        A aa2 = <span class="keyword">new</span> A();</span><br><span class="line">        aa2.start();</span><br><span class="line"></span><br><span class="line">        A aa3 = <span class="keyword">new</span> A();</span><br><span class="line">        aa3.setName(<span class="string">"李四"</span>);</span><br><span class="line">        aa3.star();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"BBB"</span>);</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">"在运行!"</span>); <span class="comment">//先执行这个主线程</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果</p>
-<blockquote>
-<p>main在运行!<br>张三在运行!<br>李四在运行!<br>Thread-1在运行 !</p>
-</blockquote>
-<h3 id="线程控制"><a href="#线程控制" class="headerlink" title="线程控制"></a>线程控制</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>isAlive</td>
-<td>判断线程是否终止(就绪,运行,阻塞都表示没有终止)</td>
-</tr>
-<tr>
-<td>getPriority</td>
-<td>活得线程的优先级数值</td>
-</tr>
-<tr>
-<td>setPriority</td>
-<td>设置优先级数值</td>
-</tr>
-</tbody>
-</table>
-</div>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/01/Java-Thread/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-插入类排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/30/%E6%8F%92%E5%85%A5%E7%B1%BB%E6%8E%92%E5%BA%8F/">插入类排序</a>
+      <a class="archive-article-title" href="/2020/05/01/Java-Thread/">Java_Thread</a>
     </h1>
   
 
-        
-        <a href="/2020/04/30/%E6%8F%92%E5%85%A5%E7%B1%BB%E6%8E%92%E5%BA%8F/" class="archive-article-date">
-  	<time datetime="2020-04-29T16:48:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h1><ul>
-<li>直接插入排序</li>
-<li>折半插入排序</li>
-<li>希尔插入排序</li>
-</ul>
-<hr>
-<h2 id="直接插入排序"><a href="#直接插入排序" class="headerlink" title="直接插入排序"></a>直接插入排序</h2><h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><ol>
-<li>带哨兵的</li>
-</ol>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">withSentrySort</span><span class="params">(<span class="keyword">int</span> r[],<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">2</span>;i &lt; n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        r[<span class="number">0</span>] = r[i];</span><br><span class="line">        <span class="keyword">for</span>(j = i<span class="number">-1</span>;r[i] &lt; r[j];j--) </span><br><span class="line">        &#123;</span><br><span class="line">            r[j+<span class="number">1</span>] = r[j]; <span class="comment">//j所指向的元素向后移</span></span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        r[j+<span class="number">1</span>] = r[<span class="number">0</span>]; <span class="comment">//把待排序元素插入,j最后永远指向空位前.</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="算法性能分析"><a href="#算法性能分析" class="headerlink" title="算法性能分析"></a>算法性能分析</h3><h4 id="时间复杂度"><a href="#时间复杂度" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p>min(最好):$O(n^2)$<br>max(最坏):$O(n)$<br>avg(平均):$O(n^2)$</p>
-<h4 id="空间复杂度"><a href="#空间复杂度" class="headerlink" title="空间复杂度"></a>空间复杂度</h4><p>$O(1)$</p>
-<h2 id="折半插入排序"><a href="#折半插入排序" class="headerlink" title="折半插入排序"></a>折半插入排序</h2><h3 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h3><ol>
-<li>带哨兵</li>
-</ol>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">binaryInsertSort</span><span class="params">(<span class="keyword">int</span> r[],<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j;</span><br><span class="line">    <span class="keyword">int</span> low,mid,high;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">2</span>;i &lt; n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        low = <span class="number">1</span>;    <span class="comment">//进去for循环就要进行初始化</span></span><br><span class="line">        high = i<span class="number">-1</span>;</span><br><span class="line">        r[<span class="number">0</span>] = r[i];</span><br><span class="line">        <span class="keyword">while</span>(low &lt;= high)</span><br><span class="line">        &#123;</span><br><span class="line">            mid = (low + high)/<span class="number">2</span>; <span class="comment">//每次都要重新让mid指向不同</span></span><br><span class="line">            <span class="keyword">if</span>(r[<span class="number">0</span>] &lt; r[mid])</span><br><span class="line">                high = mid <span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                low = mid +<span class="number">1</span>; <span class="comment">//缩进易读</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(j = i<span class="number">-1</span>;j &gt;= high+<span class="number">1</span>;j--) <span class="comment">//high最后是指向r[0]所要插入的位置</span></span><br><span class="line">        &#123;</span><br><span class="line">            r[j+<span class="number">1</span>] = r[j];</span><br><span class="line">        &#125;</span><br><span class="line">        r[high+<span class="number">1</span>] = r[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="算法性能分析-1"><a href="#算法性能分析-1" class="headerlink" title="算法性能分析"></a>算法性能分析</h3><h4 id="时间复杂度-1"><a href="#时间复杂度-1" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p>min:$O(n*log_2n)$<br>max:$O(n^2)$<br>avg:$O(n^2)$</p>
-<h4 id="空间复杂度-1"><a href="#空间复杂度-1" class="headerlink" title="空间复杂度"></a>空间复杂度</h4><p>$O(1)$</p>
-<h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><h3 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h3><p>为了实现大量元素的移动</p>
-<h3 id="代码实现-2"><a href="#代码实现-2" class="headerlink" title="代码实现"></a>代码实现</h3><ol>
-<li>带哨兵的</li>
-</ol>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">shellSort</span><span class="params">(<span class="keyword">int</span> r[],<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> gap;</span><br><span class="line">    <span class="keyword">for</span>(gap = n/<span class="number">2</span>;gap &gt;= <span class="number">1</span>;gap /= <span class="number">2</span>;) <span class="comment">//设置步长</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">int</span> i,j;</span><br><span class="line">        <span class="keyword">for</span>(i = <span class="number">1</span>+gap;i &lt; n;i = i+gap;) <span class="comment">//i指向将要配排序元素,要步长大小增加</span></span><br><span class="line">        &#123;</span><br><span class="line">            r[<span class="number">0</span>] = r[i];</span><br><span class="line">            <span class="keyword">for</span>(j = i<span class="number">-1</span>;r[i] &lt; r[j],j = j - gap) <span class="comment">//j 同理</span></span><br><span class="line">            &#123;</span><br><span class="line">                r[j+gap] = r[j];</span><br><span class="line">            &#125;</span><br><span class="line">            r[j+gap] = r[<span class="number">0</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="算法性能分析-2"><a href="#算法性能分析-2" class="headerlink" title="算法性能分析"></a>算法性能分析</h3><h4 id="时间复杂度-2"><a href="#时间复杂度-2" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p>大概约$ O(n^{1.5}) $</p>
-<h4 id="空间复杂度-2"><a href="#空间复杂度-2" class="headerlink" title="空间复杂度"></a>空间复杂度</h4><p>$ O(1) $</p>
+        <div class="article-info info-on-right">
+          
+          
 
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/30/%E6%8F%92%E5%85%A5%E7%B1%BB%E6%8E%92%E5%BA%8F/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
+  
+    </div></section>
+  
+
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2020/04/29/hello-world/" class="archive-article-date">
-  	<time datetime="2020-04-29T15:12:30.180Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-29</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/29/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -502,9 +214,9 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
-		isArchive: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
