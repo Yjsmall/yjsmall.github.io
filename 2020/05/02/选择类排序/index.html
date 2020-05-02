@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Java_Thread | Hexo</title>
+  <title>选择类排序 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="大纲  程序(进程)的引入 线程 线程的介绍 两种创建线程的方式 常见线程方法(函数)的介绍 线程的控制   线程实例(买票)  引入 一个记事本程序可以打开三个记事本(进程)  单道程序设计环境中程序特点 定义除了操作系统,只有一个用户程序,用户独享程序整个计算机资源 特点 资源多占 执行的顺序性:每次只执行一个程序,做完一个,再做下一个 结果再现性:执行环境和初始条件相同,重复执行的程序,结果">
+  <meta name="description" content="选择类排序 冒泡排序 快速排序   冒泡排序快速排序算法思想代码实现 带哨兵1234567891011121314151617181920212223242526272829303132void QuickSort(int r[],int low,int high)&amp;#123;    int index;    if(low &lt; high)    &amp;#123;        index &#x3D;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java_Thread">
-<meta property="og:url" content="http://yoursite.com/2020/05/01/Java-Thread/index.html">
+<meta property="og:title" content="选择类排序">
+<meta property="og:url" content="http://yoursite.com/2020/05/02/%E9%80%89%E6%8B%A9%E7%B1%BB%E6%8E%92%E5%BA%8F/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="大纲  程序(进程)的引入 线程 线程的介绍 两种创建线程的方式 常见线程方法(函数)的介绍 线程的控制   线程实例(买票)  引入 一个记事本程序可以打开三个记事本(进程)  单道程序设计环境中程序特点 定义除了操作系统,只有一个用户程序,用户独享程序整个计算机资源 特点 资源多占 执行的顺序性:每次只执行一个程序,做完一个,再做下一个 结果再现性:执行环境和初始条件相同,重复执行的程序,结果">
+<meta property="og:description" content="选择类排序 冒泡排序 快速排序   冒泡排序快速排序算法思想代码实现 带哨兵1234567891011121314151617181920212223242526272829303132void QuickSort(int r[],int low,int high)&amp;#123;    int index;    if(low &lt; high)    &amp;#123;        index &#x3D;">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-05-01T09:01:31.000Z">
-<meta property="article:modified_time" content="2020-05-01T10:53:13.597Z">
+<meta property="article:published_time" content="2020-05-02T12:08:39.000Z">
+<meta property="article:modified_time" content="2020-05-02T13:49:19.208Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -154,134 +154,36 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Java-Thread" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-选择类排序" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Java_Thread
+      选择类排序
     </h1>
   
 
         
-        <a href="/2020/05/01/Java-Thread/" class="archive-article-date">
-  	<time datetime="2020-05-01T09:01:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-01</time>
+        <a href="/2020/05/02/%E9%80%89%E6%8B%A9%E7%B1%BB%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+  	<time datetime="2020-05-02T12:08:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>大纲</p>
-<ul>
-<li>程序(进程)的引入</li>
-<li>线程<ul>
-<li>线程的介绍</li>
-<li>两种创建线程的方式</li>
-<li>常见线程方法(函数)的介绍</li>
-<li>线程的控制</li>
+        <h1 id="选择类排序"><a href="#选择类排序" class="headerlink" title="选择类排序"></a>选择类排序</h1><ul>
+<li>冒泡排序</li>
+<li>快速排序</li>
 </ul>
+<hr>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><h4 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h4><h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><ol>
+<li>带哨兵<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">QuickSort</span><span class="params">(<span class="keyword">int</span> r[],<span class="keyword">int</span> low,<span class="keyword">int</span> high)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> index;</span><br><span class="line">    <span class="keyword">if</span>(low &lt; high)</span><br><span class="line">    &#123;</span><br><span class="line">        index = Partition(r,low,high);</span><br><span class="line"></span><br><span class="line">        QuickSort(r,low,index<span class="number">-1</span>);</span><br><span class="line">        QuickSort(r,index+<span class="number">1</span>,high);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Partition</span><span class="params">(<span class="keyword">int</span> r[],<span class="keyword">int</span> low,<span class="keyword">int</span> high)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    r[<span class="number">0</span>] = r[low]; <span class="comment">//r[0]就是中枢值</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(low &lt; high &amp;&amp; r[high] &gt;= r[<span class="number">0</span>]) <span class="comment">//比中枢值大,high往前移动</span></span><br><span class="line">    &#123;</span><br><span class="line">        --high;</span><br><span class="line">    &#125;</span><br><span class="line">    r[low] = r[high];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(low &lt;high &amp;&amp; r[low] &lt; r[<span class="number">0</span>]) <span class="comment">//比中枢值小,low往后移动</span></span><br><span class="line">    &#123;</span><br><span class="line">        ++low;</span><br><span class="line">    &#125;</span><br><span class="line">    r[high] = r[low];</span><br><span class="line"></span><br><span class="line">    r[low] = r[<span class="number">0</span>]; <span class="comment">//把中枢值赋值到它应该有的位置</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> low; <span class="comment">//返回中枢值的位置索引</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>不带哨兵<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">QuickSort</span><span class="params">(<span class="keyword">int</span> r[],<span class="keyword">int</span> low,<span class="keyword">int</span> high)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">if</span>(low &lt; high)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//寻找中枢位置,因为从r[low]已经被占领,所以先从后面开始对比.</span></span><br><span class="line">        temp = r[low];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(low &lt; high &amp;&amp; r[high] &gt;= temp)</span><br><span class="line">        &#123;</span><br><span class="line">            --high;</span><br><span class="line">        &#125;</span><br><span class="line">        r[low] = r[high];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(low &lt; high &amp;&amp; r[low] &lt; temp)</span><br><span class="line">        &#123;</span><br><span class="line">            ++low;</span><br><span class="line">        &#125;</span><br><span class="line">        r[high] = r[low];</span><br><span class="line"></span><br><span class="line">        r[low] = temp;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//递归调用</span></span><br><span class="line">        QuickSort(r,<span class="number">0</span>,low<span class="number">-1</span>);</span><br><span class="line">        QuickSort(r,low+<span class="number">1</span>,high);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 </li>
-<li>线程实例(买票)</li>
-</ul>
-<h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><blockquote>
-<p>一个记事本程序可以打开三个记事本(进程)</p>
-<ul>
-<li>单道程序设计环境中<strong>程序</strong>特点<ul>
-<li>定义<br>除了操作系统,只有一个用户程序,用户独享程序整个计算机资源</li>
-<li>特点<ol>
-<li>资源多占</li>
-<li>执行的顺序性:每次只执行一个程序,做完一个,再做下一个</li>
-<li>结果再现性:执行环境和初始条件相同,重复执行的程序,结果还是一样的</li>
 </ol>
-</li>
-</ul>
-</li>
-<li>多道程序设计环境中<strong>程序</strong>特点<ul>
-<li>定义<br>出来操作系统,存在多个用户程序 </li>
-<li>特点<ol>
-<li>间断性:由于资源共享和合作,并发程序间相互制约,造成合作执间断(比如我要存数据,内存不够,或者替代原有内存的内容)</li>
-<li>失去封闭性:程序执行受外界影响</li>
-<li>不可再现性:可能得到不同结果<br>进程切换需要时间,所以要线程</li>
-</ol>
-</li>
-</ul>
-</li>
-</ul>
-</blockquote>
-<h2 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h2><h3 id="线程的介绍"><a href="#线程的介绍" class="headerlink" title="线程的介绍"></a>线程的介绍</h3><ul>
-<li>线程<ul>
-<li>单线程:一条线走到底</li>
-<li>多线程:劈开一个分支,交替执行.(A执行一会,B执行一会)</li>
-</ul>
-</li>
-</ul>
-<h3 id="两种线程的方式"><a href="#两种线程的方式" class="headerlink" title="两种线程的方式"></a>两种线程的方式</h3><blockquote>
-<p>创建线程的第一种方式</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> <span class="keyword">extends</span> <span class="title">Thread</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;                      <span class="comment">//36~38就是A执行一会   </span></span><br><span class="line">            System.out.printfln(<span class="string">"AAA"</span>);       </span><br><span class="line">        &#125;                                   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestThread</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        A aa = <span class="keyword">new</span> A();</span><br><span class="line">        aa.start(); <span class="comment">//1.开始一个线程 2.执行run方法</span></span><br><span class="line">        <span class="comment">//aa.start();不可以调用两次</span></span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;                       <span class="comment">//while循环就是B执行一会</span></span><br><span class="line">            System.out.println(<span class="string">"BBB"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong><em>注意问题</em></strong></p>
-<ol>
-<li>创建线程是使用star()方法,直接调用run()方法只会while(AAA)不会执行BBB</li>
-<li>执行一个线程实际就是执行该线程的<strong>run方法中的代码</strong></li>
-<li>cpu不一定立即执行aa对应的线程</li>
-<li>一个Thread对象只能代表一个线程,对象不能调用两次star();</li>
-</ol>
-<blockquote>
-<p>创建线程的第二种方式</p>
-</blockquote>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> <span class="keyword">implements</span> <span class="title">Runnable</span></span></span><br><span class="line"><span class="class"></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;                      </span><br><span class="line">            System.out.printfln(<span class="string">"AAA"</span>);       </span><br><span class="line">        &#125;                                   </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span></span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestThread</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        A aa = <span class="keyword">new</span> A();</span><br><span class="line">        Thread t = <span class="keyword">new</span> Thread(aa); <span class="comment">//public Thread(Runnable r);人家的构造方法所要的参数</span></span><br><span class="line">        Thread t = <span class="keyword">new</span> Thread(<span class="keyword">new</span> A());</span><br><span class="line">        t.star();</span><br><span class="line"></span><br><span class="line">        <span class="comment">//B bb = new B();</span></span><br><span class="line">        <span class="comment">//Thread t2 = new Thread(bb);传入参数不同</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(<span class="keyword">true</span>)&#123;                       </span><br><span class="line">            System.out.println(<span class="string">"BBB"</span>);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="常见线程的方法-函数-介绍"><a href="#常见线程的方法-函数-介绍" class="headerlink" title="常见线程的方法(函数)介绍"></a>常见线程的方法(函数)介绍</h3><ul>
-<li><p>public final void setName(String name)</p>
-<ul>
-<li>这是当前线程的名字<ul>
-<li>final 修饰类(不可继承) 修饰属性(不可修改,且要赋初值) 修饰方法(不可重写) </li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p>public static Thread currentThread()</p>
-<ul>
-<li>返回当前正在执行的线程对象的引用<br>因为是static,所以可以用类名来访问</li>
-</ul>
-</li>
-<li><p>public final String getName()</p>
-<ul>
-<li>返回当前线程的名字</li>
-</ul>
-</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> <span class="keyword">extends</span> <span class="title">Thread</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">"在运行!"</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestThread</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        A aa1 = <span class="keyword">new</span> A();</span><br><span class="line">        aa1.setName(<span class="string">"张三"</span>);</span><br><span class="line">        aa1.start();</span><br><span class="line">        </span><br><span class="line">        A aa2 = <span class="keyword">new</span> A();</span><br><span class="line">        aa2.start();</span><br><span class="line"></span><br><span class="line">        A aa3 = <span class="keyword">new</span> A();</span><br><span class="line">        aa3.setName(<span class="string">"李四"</span>);</span><br><span class="line">        aa3.star();</span><br><span class="line"></span><br><span class="line">        System.out.println(<span class="string">"BBB"</span>);</span><br><span class="line">        System.out.println(Thread.currentThread().getName() + <span class="string">"在运行!"</span>); <span class="comment">//先执行这个主线程</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>运行结果</p>
-<blockquote>
-<p>main在运行!<br>张三在运行!<br>李四在运行!<br>Thread-1在运行 !</p>
-</blockquote>
-<h3 id="线程控制"><a href="#线程控制" class="headerlink" title="线程控制"></a>线程控制</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>方法</th>
-<th>功能</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>isAlive</td>
-<td>判断线程是否终止(就绪,运行,阻塞都表示没有终止)</td>
-</tr>
-<tr>
-<td>getPriority</td>
-<td>活得线程的优先级数值</td>
-</tr>
-<tr>
-<td>setPriority</td>
-<td>设置优先级数值</td>
-</tr>
-</tbody>
-</table>
-</div>
 
       
 
@@ -361,7 +263,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/01/Java-Thread/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/05/02/%E9%80%89%E6%8B%A9%E7%B1%BB%E6%8E%92%E5%BA%8F/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -375,18 +277,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/02/%E9%80%89%E6%8B%A9%E7%B1%BB%E6%8E%92%E5%BA%8F/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          选择类排序
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/30/%E6%8F%92%E5%85%A5%E7%B1%BB%E6%8E%92%E5%BA%8F/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">插入类排序</div>
+    <a href="/2020/05/01/Java-Thread/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java_Thread</div>
       <i class="icon-circle-right"></i>
     </a>
   
