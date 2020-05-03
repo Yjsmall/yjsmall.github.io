@@ -152,19 +152,86 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-选择类排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-选择类排序(2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/05/02/%E9%80%89%E6%8B%A9%E7%B1%BB%E6%8E%92%E5%BA%8F/">选择类排序</a>
+      <a class="article-title" href="/2020/05/03/%E9%80%89%E6%8B%A9%E7%B1%BB%E6%8E%92%E5%BA%8F(2)/">选择类排序(2)</a>
     </h1>
   
 
         
-        <a href="/2020/05/02/%E9%80%89%E6%8B%A9%E7%B1%BB%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+        <a href="/2020/05/03/%E9%80%89%E6%8B%A9%E7%B1%BB%E6%8E%92%E5%BA%8F(2)/" class="archive-article-date">
+  	<time datetime="2020-05-03T06:46:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-03</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="选择类排序"><a href="#选择类排序" class="headerlink" title="选择类排序"></a>选择类排序</h1><ul>
+<li>简单选择排序</li>
+<li>推排序</li>
+</ul>
+<hr>
+<h3 id="简单选择排序"><a href="#简单选择排序" class="headerlink" title="简单选择排序"></a>简单选择排序</h3><h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4>
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/05/03/%E9%80%89%E6%8B%A9%E7%B1%BB%E6%8E%92%E5%BA%8F(2)/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-交换类排序(2)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/02/%E4%BA%A4%E6%8D%A2%E7%B1%BB%E6%8E%92%E5%BA%8F(2)/">选择类排序</a>
+    </h1>
+  
+
+        
+        <a href="/2020/05/02/%E4%BA%A4%E6%8D%A2%E7%B1%BB%E6%8E%92%E5%BA%8F(2)/" class="archive-article-date">
   	<time datetime="2020-05-02T12:08:39.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-02</time>
 </a>
         
@@ -177,7 +244,37 @@
 <li>快速排序</li>
 </ul>
 <hr>
-<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h4 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h4><h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> *r,<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j,m;</span><br><span class="line">    <span class="keyword">int</span> flag = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">for</span>(m = <span class="number">1</span>;m&lt;=n<span class="number">-1</span> &amp;&amp; flag=<span class="number">1</span>;++m)</span><br><span class="line">    &#123;</span><br><span class="line">        flag= <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">1</span>;j &lt;= m;++j)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(r[j] &gt; r[j+<span class="number">1</span>])</span><br><span class="line">            &#123;</span><br><span class="line">                flag = <span class="number">1</span>;</span><br><span class="line">                x = r[j]</span><br><span class="line">                r[j] = r[j+<span class="number">1</span>];</span><br><span class="line">                r[j+<span class="number">1</span>] = x;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><h4 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h4><h4 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">BubbleSort</span><span class="params">(<span class="keyword">int</span> *r,<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">int</span> flag = <span class="number">1</span>;<span class="comment">//1表示开始.需要进行排序</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>;i &lt;= n<span class="number">-1</span> &amp;&amp; flag=<span class="number">1</span>;++i) <span class="comment">//i表示第几趟排序,n个元素需要排序n-1趟</span></span><br><span class="line">    &#123;</span><br><span class="line">        flag= <span class="number">0</span>; <span class="comment">//0表示结束,不需要排序,已经有序</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span>(j = <span class="number">0</span>;j &lt; n-i;++j) <span class="comment">//j表示指向第一个元素,数组下标0开始.第i趟需要比较n-i次.</span></span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(r[j] &gt; r[j+<span class="number">1</span>]) <span class="comment">//交换顺序</span></span><br><span class="line">            &#123;</span><br><span class="line">                flag = <span class="number">1</span>;</span><br><span class="line"></span><br><span class="line">                temp = r[j]</span><br><span class="line">                r[j] = r[j+<span class="number">1</span>];</span><br><span class="line">                r[j+<span class="number">1</span>] = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="算法性能"><a href="#算法性能" class="headerlink" title="算法性能"></a>算法性能</h4><ol>
+<li><p>时间复杂度</p>
+<ul>
+<li><p>最坏:$O(n^2)$</p>
+<ul>
+<li>第 $1$ 趟执行 $n-1$ 次;</li>
+<li>第 $2$ 趟执行 $n-2$ 次;</li>
+<li>……</li>
+<li>第 $n-1$ 趟执行 $1$ 次;</li>
+<li>$\sum_{i=1}^{n-1}i=(1+2+…+n-1)*(n-1)/2$</li>
+</ul>
+</li>
+<li><p>最优:$O(n)$</p>
+<ul>
+<li>已经有序,if语句不需要执行,flag=0;所以最外层不需要执行</li>
+</ul>
+</li>
+<li><p>平均:$O(n^2)$ </p>
+</li>
+</ul>
+</li>
+<li><p>空间复杂</p>
+<ul>
+<li>$O(1)$<ul>
+<li>只需要一个空间temp,</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
 <h3 id="快速排序"><a href="#快速排序" class="headerlink" title="快速排序"></a>快速排序</h3><h4 id="算法思想-1"><a href="#算法思想-1" class="headerlink" title="算法思想"></a>算法思想</h4><h4 id="代码实现-1"><a href="#代码实现-1" class="headerlink" title="代码实现"></a>代码实现</h4><ol>
 <li>带哨兵<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">QuickSort</span><span class="params">(<span class="keyword">int</span> r[],<span class="keyword">int</span> low,<span class="keyword">int</span> high)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> index;</span><br><span class="line">    <span class="keyword">if</span>(low &lt; high)</span><br><span class="line">    &#123;</span><br><span class="line">        index = Partition(r,low,high);</span><br><span class="line"></span><br><span class="line">        QuickSort(r,low,index<span class="number">-1</span>);</span><br><span class="line">        QuickSort(r,index+<span class="number">1</span>,high);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">Partition</span><span class="params">(<span class="keyword">int</span> r[],<span class="keyword">int</span> low,<span class="keyword">int</span> high)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    r[<span class="number">0</span>] = r[low]; <span class="comment">//r[0]就是中枢值</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(low &lt; high &amp;&amp; r[high] &gt;= r[<span class="number">0</span>]) <span class="comment">//比中枢值大,high往前移动</span></span><br><span class="line">    &#123;</span><br><span class="line">        --high;</span><br><span class="line">    &#125;</span><br><span class="line">    r[low] = r[high];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span>(low &lt;high &amp;&amp; r[low] &lt; r[<span class="number">0</span>]) <span class="comment">//比中枢值小,low往后移动</span></span><br><span class="line">    &#123;</span><br><span class="line">        ++low;</span><br><span class="line">    &#125;</span><br><span class="line">    r[high] = r[low];</span><br><span class="line"></span><br><span class="line">    r[low] = r[<span class="number">0</span>]; <span class="comment">//把中枢值赋值到它应该有的位置</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> low; <span class="comment">//返回中枢值的位置索引</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 <li>不带哨兵<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">QuickSort</span><span class="params">(<span class="keyword">int</span> r[],<span class="keyword">int</span> low,<span class="keyword">int</span> high)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> temp;</span><br><span class="line">    <span class="keyword">if</span>(low &lt; high)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="comment">//寻找中枢位置,因为从r[low]已经被占领,所以先从后面开始对比.</span></span><br><span class="line">        temp = r[low];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(low &lt; high &amp;&amp; r[high] &gt;= temp)</span><br><span class="line">        &#123;</span><br><span class="line">            --high;</span><br><span class="line">        &#125;</span><br><span class="line">        r[low] = r[high];</span><br><span class="line"></span><br><span class="line">        <span class="keyword">while</span>(low &lt; high &amp;&amp; r[low] &lt; temp)</span><br><span class="line">        &#123;</span><br><span class="line">            ++low;</span><br><span class="line">        &#125;</span><br><span class="line">        r[high] = r[low];</span><br><span class="line"></span><br><span class="line">        r[low] = temp;</span><br><span class="line"></span><br><span class="line">        <span class="comment">//递归调用</span></span><br><span class="line">        QuickSort(r,<span class="number">0</span>,low<span class="number">-1</span>);</span><br><span class="line">        QuickSort(r,low+<span class="number">1</span>,high);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -195,7 +292,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/05/02/%E9%80%89%E6%8B%A9%E7%B1%BB%E6%8E%92%E5%BA%8F/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/05/02/%E4%BA%A4%E6%8D%A2%E7%B1%BB%E6%8E%92%E5%BA%8F(2)/">展开全文 >></a>
         </p>
       
 
@@ -398,19 +495,19 @@
 
 
   
-    <article id="post-插入类排序" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-插入类排序(3)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/04/30/%E6%8F%92%E5%85%A5%E7%B1%BB%E6%8E%92%E5%BA%8F/">插入类排序</a>
+      <a class="article-title" href="/2020/04/30/%E6%8F%92%E5%85%A5%E7%B1%BB%E6%8E%92%E5%BA%8F(3)/">插入类排序</a>
     </h1>
   
 
         
-        <a href="/2020/04/30/%E6%8F%92%E5%85%A5%E7%B1%BB%E6%8E%92%E5%BA%8F/" class="archive-article-date">
+        <a href="/2020/04/30/%E6%8F%92%E5%85%A5%E7%B1%BB%E6%8E%92%E5%BA%8F(3)/" class="archive-article-date">
   	<time datetime="2020-04-29T16:48:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-04-30</time>
 </a>
         
@@ -434,7 +531,7 @@
 <li>带哨兵</li>
 </ol>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">binaryInsertSort</span><span class="params">(<span class="keyword">int</span> r[],<span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i,j;</span><br><span class="line">    <span class="keyword">int</span> low,mid,high;</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">2</span>;i &lt; n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        low = <span class="number">1</span>;    <span class="comment">//进去for循环就要进行初始化</span></span><br><span class="line">        high = i<span class="number">-1</span>;</span><br><span class="line">        r[<span class="number">0</span>] = r[i];</span><br><span class="line">        <span class="keyword">while</span>(low &lt;= high)</span><br><span class="line">        &#123;</span><br><span class="line">            mid = (low + high)/<span class="number">2</span>; <span class="comment">//每次都要重新让mid指向不同</span></span><br><span class="line">            <span class="keyword">if</span>(r[<span class="number">0</span>] &lt; r[mid])</span><br><span class="line">                high = mid <span class="number">-1</span>;</span><br><span class="line">            <span class="keyword">else</span></span><br><span class="line">                low = mid +<span class="number">1</span>; <span class="comment">//缩进易读</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(j = i<span class="number">-1</span>;j &gt;= high+<span class="number">1</span>;j--) <span class="comment">//high最后是指向r[0]所要插入的位置</span></span><br><span class="line">        &#123;</span><br><span class="line">            r[j+<span class="number">1</span>] = r[j];</span><br><span class="line">        &#125;</span><br><span class="line">        r[high+<span class="number">1</span>] = r[<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="算法性能分析-1"><a href="#算法性能分析-1" class="headerlink" title="算法性能分析"></a>算法性能分析</h3><h4 id="时间复杂度-1"><a href="#时间复杂度-1" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p>min:$O(nlogn)$<br>max:$O(n^2)$<br>avg:$O(n^2)$</p>
+<h3 id="算法性能分析-1"><a href="#算法性能分析-1" class="headerlink" title="算法性能分析"></a>算法性能分析</h3><h4 id="时间复杂度-1"><a href="#时间复杂度-1" class="headerlink" title="时间复杂度"></a>时间复杂度</h4><p>最好:$O(nlogn)$<br>最坏:$O(n^2)$<br>平均:$O(n^2)$</p>
 <h4 id="空间复杂度-1"><a href="#空间复杂度-1" class="headerlink" title="空间复杂度"></a>空间复杂度</h4><p>$O(1)$</p>
 <h2 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h2><h3 id="算法思想"><a href="#算法思想" class="headerlink" title="算法思想"></a>算法思想</h3><p>为了实现大量元素的移动</p>
 <h3 id="代码实现-2"><a href="#代码实现-2" class="headerlink" title="代码实现"></a>代码实现</h3><ol>
@@ -455,7 +552,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2020/04/30/%E6%8F%92%E5%85%A5%E7%B1%BB%E6%8E%92%E5%BA%8F/">展开全文 >></a>
+          <a class="article-more-a" href="/2020/04/30/%E6%8F%92%E5%85%A5%E7%B1%BB%E6%8E%92%E5%BA%8F(3)/">展开全文 >></a>
         </p>
       
 
