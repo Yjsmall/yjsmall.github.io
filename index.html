@@ -156,6 +156,75 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-JavaWeb" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/07/06/JavaWeb/">JavaWeb</a>
+    </h1>
+  
+
+        
+        <a href="/2020/07/06/JavaWeb/" class="archive-article-date">
+  	<time datetime="2020-07-06T11:45:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-07-06</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="xml"><a href="#xml" class="headerlink" title="xml"></a>xml</h2><h3 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h3><h4 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h4><p>xml是一种自定义标签<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;books&gt;</span><br><span class="line">    &lt;book sn=<span class="string">"书号"</span>&gt;</span><br><span class="line">        &lt;name&gt;时间简史&lt;<span class="regexp">/name&gt;</span></span><br><span class="line"><span class="regexp">        &lt;author&gt;霍金&lt;/</span>author&gt;</span><br><span class="line">    &lt;<span class="regexp">/book&gt;</span></span><br><span class="line"><span class="regexp">&lt;/</span>books&gt;</span><br><span class="line"><span class="comment">//&lt;book&gt;&lt;/books&gt;,不能再这样写</span></span><br><span class="line"><span class="comment">//&lt;xmlbooks&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="注意问题"><a href="#注意问题" class="headerlink" title="注意问题"></a>注意问题</h4><ol>
+<li><p>父标题只能有一个(<books></books>)<br><img src="../markdwon/xml.png" alt="xml层级"></p>
+</li>
+<li><p>不能用xml开头(不分大小写)</p>
+</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/07/06/JavaWeb/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-前端知识" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -207,7 +276,31 @@
 <li><p>框架</p>
 <figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">src</span>=<span class="string">"地址.html"</span>&gt;</span>就是跳转到别的页面<span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">iframe</span> <span class="attr">scr</span>=<span class="string">"x.html"</span> <span class="attr">name</span>=<span class="string">"frame"</span>&gt;</span><span class="tag">&lt;/<span class="name">iframe</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"http://www.baidu.com"</span> <span class="attr">target</span>=<span class="string">"frame"</span>&gt;</span>百度（超链接，跳转到targe这个所指的网页）<span class="tag">&lt;/<span class="name">a</span>&gt;</span><span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br></pre></td></tr></table></figure>
 <h3 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h3><p>就是可以在标签里面值</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">""</span> <span class="attr">style</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">“”</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">h1</span> <span class="attr">id</span>=<span class="string">""</span> <span class="attr">class</span>=<span class="string">""</span> <span class="attr">style</span>=<span class="string">""</span> <span class="attr">title</span>=<span class="string">“”</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h2 id="JavaScript"><a href="#JavaScript" class="headerlink" title="JavaScript"></a>JavaScript</h2><h3 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//是否包含字母 e</span></span><br><span class="line"><span class="keyword">var</span> patt = <span class="regexp">/e/</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> str = <span class="string">"abcedf"</span>;</span><br><span class="line">alert(patt.text(str));</span><br><span class="line"></span><br><span class="line"><span class="comment">//必须要字母，下划线，数字</span></span><br><span class="line"><span class="keyword">var</span> patt = <span class="regexp">/\w/</span>;</span><br><span class="line"><span class="comment">//是否包含a~z字母</span></span><br><span class="line"><span class="keyword">var</span> patt = <span class="regexp">/[a~z]/</span>;</span><br><span class="line"><span class="comment">//是否至少包含连续3个a</span></span><br><span class="line"><span class="keyword">var</span> patt = <span class="regexp">/a&#123;3&#125;/</span>;</span><br><span class="line"><span class="comment">//是否至少包含连续3个a,至多5个a</span></span><br><span class="line"><span class="keyword">var</span> patt = <span class="regexp">/a&#123;3,5&#125;/</span>;</span><br><span class="line"><span class="comment">//必须以a结尾</span></span><br><span class="line"><span class="keyword">var</span> patt = <span class="regexp">/a&amp;/</span>;</span><br><span class="line"><span class="comment">//必须以a开头</span></span><br><span class="line"><span class="keyword">var</span> patt = <span class="regexp">/^a/</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="JQuery"><a href="#JQuery" class="headerlink" title="JQuery"></a>JQuery</h2><h2 id="核心函数"><a href="#核心函数" class="headerlink" title="核心函数 $"></a>核心函数 $</h2><ol>
+<li>选择器<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"#id属性值"</span>);</span><br><span class="line">$(<span class="string">"标签名"</span>);</span><br><span class="line">$(<span class="string">".class属性值"</span>);</span><br></pre></td></tr></table></figure></li>
+<li>Dom对象 和 jQuery对象<br><strong>jQuery本质</strong>—-dom对象的数组集合和一堆操作</li>
+</ol>
+<ul>
+<li>两者的区别<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>)</span>&#123;</span><br><span class="line">  <span class="keyword">var</span> $buttons = $(<span class="string">"button"</span>);</span><br><span class="line">  <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt;$buttons.length; ++i)&#123;</span><br><span class="line">    alert($buttons[i]);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;button id=<span class="string">"1"</span>&gt;按钮<span class="number">1</span>&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">  &lt;button id="2"&gt;按钮2&lt;/</span>button&gt;</span><br><span class="line">  &lt;button id=<span class="string">"3"</span>&gt;按钮<span class="number">3</span>&lt;<span class="regexp">/button&gt;</span></span><br><span class="line"><span class="regexp">  &lt;button id="4"&gt;按钮4&lt;/</span>button&gt;</span><br><span class="line">&lt;<span class="regexp">/body&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/dom对象和jQuery对象修改文本</span></span><br><span class="line"><span class="regexp">document.getElementById("1").innerHTML = "这是dom对象的属性innerHTML";</span></span><br><span class="line"><span class="regexp">$("#1").innerHTML = "jQuery无法使用dom对象的属性";</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/两者函数无法使用别人的object, properties,function</span></span><br><span class="line"><span class="regexp">$("#1").click(function())&#123;</span></span><br><span class="line"><span class="regexp">  alert("这是jQueary对象的函数");</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">/</span><span class="regexp">/不可以使用错误</span></span><br><span class="line"><span class="regexp">document.getElementById("1").click(function())&#123;</span></span><br><span class="line"><span class="regexp">  alert("This is jQuery's object");</span></span><br><span class="line"><span class="regexp">&#125;</span></span><br></pre></td></tr></table></figure></li>
+<li>相互转换<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//dom ---&gt; jQuery</span></span><br><span class="line"><span class="keyword">var</span> $obj = $(dom对象);</span><br><span class="line"><span class="comment">//jQuery ---&gt; dom</span></span><br><span class="line"><span class="keyword">var</span> dom = $obj[下标];</span><br><span class="line"></span><br><span class="line"><span class="comment">//This is jQuery object</span></span><br><span class="line">alert($(<span class="built_in">document</span>.getElementById.(<span class="string">"1"</span>)))</span><br><span class="line"><span class="comment">//This is dom object</span></span><br><span class="line">alert($(<span class="built_in">document</span>.getElementById.(<span class="string">"1"</span>))[<span class="number">0</span>])</span><br><span class="line"></span><br><span class="line">$(<span class="string">"button"</span>);</span><br><span class="line">本质就是一个数组,所以可以用下标访问</span><br><span class="line">[ <span class="xml"><span class="tag">&lt;<span class="name">button</span> <span class="attr">id</span>=<span class="string">"1"</span>&gt;</span>按钮1<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span>,</span><br><span class="line">  &lt;button id=<span class="string">"2"</span>&gt;按钮<span class="number">2</span>&lt;<span class="regexp">/button&gt;,</span></span><br><span class="line"><span class="regexp">  &lt;button id="3"&gt;按钮3&lt;/</span>button&gt;,</span><br><span class="line">  &lt;button id=<span class="string">"4"</span>&gt;按钮<span class="number">4</span>&lt;<span class="regexp">/button&gt;]</span></span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol>
+<li>选择器</li>
+</ol>
+<ul>
+<li>基本选择器<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>)</span>&#123;</span><br><span class="line">  <span class="comment">//这里开始写jQuery代码,因为页面加载完成后，才可以查询到那些标签</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">  * 点击按钮1，更换颜色</span></span><br><span class="line"><span class="comment">  * 查询 id：1 且 id：one 的标签的颜色，就是嵌套一个又一个，在第一级的下一级写</span></span><br><span class="line"><span class="comment">  */</span></span><br><span class="line">  $(<span class="string">"1"</span>).click(<span class="function"><span class="keyword">function</span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"#one"</span>).css(<span class="string">"background-color"</span>,<span class="string">"#bbffaa"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ul>
+<li><p>层级选择器</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* 点击按钮1，更换body标签中 **所有div标签** 的颜色 空格</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* 点击按钮1，更换body标签中 **第一级div标签（儿子，不包括孙子）** 的颜色 &gt;</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* 点击按钮1，更换body标签中 **紧跟的div标签** 的颜色 +</span></span><br><span class="line"><span class="comment">*</span></span><br><span class="line"><span class="comment">* 点击按钮1，更换body标签结束后的 *&lt;/body&gt;后面所有div标签** 的颜色 ~</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">$(<span class="function"><span class="keyword">function</span>)</span>&#123;</span><br><span class="line"></span><br><span class="line">  $(<span class="string">"#btn1"</span>).click(<span class="function"><span class="keyword">function</span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"body div"</span>).css(<span class="string">"background-color"</span>,<span class="string">"#bbffaa"</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">  $(<span class="string">"#btn1"</span>).click(<span class="function"><span class="keyword">function</span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"body &gt; div"</span>).css(<span class="string">"background-color"</span>,<span class="string">"#bbffaa"</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  $(<span class="string">"#btn1"</span>).click(<span class="function"><span class="keyword">function</span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"body + div"</span>).css(<span class="string">"background-color"</span>,<span class="string">"#bbffaa"</span>);</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  $(<span class="string">"#btn1"</span>).click(<span class="function"><span class="keyword">function</span>)</span>&#123;</span><br><span class="line">    $(<span class="string">"body ~ div"</span>).css(<span class="string">"background-color"</span>,<span class="string">"#bbffaa"</span>);</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>过滤选择器</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="function"><span class="keyword">function</span>)</span>&#123;</span><br><span class="line">  $(<span class="string">"div：first/last/not(.one)/even/odd(奇数）/gt(3)大于3/eq(3)等于3/lt（3）小于3/header"</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -1329,20 +1422,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-<script type="text/x-mathjax-config">
-    MathJax.Hub.Config({
-        tex2jax: {
-            inlineMath: [ ["$","$"], ["\\(","\\)"] ],
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
-            processEscapes: true
-        }
-    });
-    MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax();
-        for (var i = 0; i < all.length; ++i)
-            all[i].SourceElement().parentNode.className += ' has-jax';
-    });
-</script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML"></script>
 </body>
 </html>
